@@ -25,22 +25,62 @@ function randomQuote() {
 randomQuote();
 
 
-// Part 1
+// // Part 1
+document.title = "DOM "
+// // Part 2
+document.body.style.backgroundColor='#d4cafc';
+// // Part 3
+var newsize = document.querySelectorAll('.special-title');
+for (var i = 0; i < newsize.length; i++) {
+  newsize[i].style.fontSize = '2rem';
+}
+// // Part 4
+var divClass = document.querySelectorAll('.side-bar')[1];
+var ulList = document.querySelectorAll('ul')[1];
+var newFavList = document.createElement('li');
+var newCity = document.createTextNode('Riyadh');
 
+newFavList.appendChild(newCity);
+ulList.appendChild(newFavList);
+divClass.appendChild(ulList);
+this.document.body.appendChild(ulList);
+// // Part 5
+var newDiv = document.createElement('div');
+newDiv.classList.add('blog-post');
+newDiv.classList.add('purple');
+console.log(newDiv);
+var newHeader = document.createElement('h1');
+var pText = document.createElement('p');
+var cityEve = document.createTextNode('end game');
 
-// Part 2
+pText.appendChild(cityEve);
+newHeader.appendChild(newCity);
+newDiv.appendChild(newHeader);
+newDiv.appendChild(pText);
 
-
-// Part 3
-
-
-// Part 4
-
-
-// Part 5
-
+document.querySelector('.main').appendChild(newDiv);
 
 // Part 6
 
-
+var listt = document.querySelector('#favorite-things'); 
+   
+  
+   console.log(listt);
+   for (i=0;i<favoriteThings.length;i++)
+   {
+     var te = favoriteThings[i];
+   var li1 = document.createElement('li');  
+   var li1text = document.createTextNode(te); 
+   li1.appendChild(li1text);
+   listt.appendChild(li1);  
+   }
 // Part 7
+var submitButton = document.querySelector('#quote-title');
+submitButton.addEventListener('click', function(event) {
+
+
+     randomQuote();
+
+     event.preventDefault();
+    console.log(event)
+})
