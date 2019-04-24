@@ -45,17 +45,40 @@ bodyChanger(bdChanger);
 // Part 3
 var spTitle = document.querySelectorAll('.special-title');
  console.log(spTitle);
-function fSize (sTitles){
-      sTitles.style.fontSize = '2rem' ;
-      // console.log(txt.innerHTML)
-}
-fSize(spTitle);
+
+ spTitle.forEach(function(i)
+ {
+    i.style.fontSize = '2rem';
+ })
+
 // Part 4
 
+var selList = document.querySelector('#city');
+console.log(selList)
+var newList = document.createElement('li');
+var newCity = document.createTextNode('Riyadh');
 
+function addToList(NL,NC,SL){
+  NL.appendChild(NC);
+  SL.appendChild(NL);
+}
+addToList(newList,newCity,selList);
 // Part 5
+var dEle = document.createElement('div');
+dEle.className = 'blog-post';
+var hEle = document.createElement('h2');
+var newTextH = document.createTextNode('Riyadh');
+var pEle = document.createElement('p');
+var newTextP = document.createTextNode(' I BECAME THE WORLD CHAMP');
 
-
+function addToBlog(newP,pE,newTH,hE,dE){
+              pE.appendChild(newP);
+              hE.appendChild(newTH);
+              //
+              hE.appendChild(pE);
+              dE.appendChild(hE);
+}
+console.log(addToBlog(newTextP,pEle,newTextH,hEle,dEle))
 // Part 6
 
 
