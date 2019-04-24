@@ -24,16 +24,32 @@ function randomQuote() {
 
 randomQuote();
 
-
+// console.log('JS is connected');
 // Part 1
-
+var txtCont = document.querySelector('#main-title');
+// console.log(txtCont);
+function TxtChanger(txt){
+      txt.innerHTML = 'Welcome to my homepage';
+      // console.log(txt.innerHTML)
+      
+}
+TxtChanger(txtCont);
 
 // Part 2
-
-
+var bdChanger = document.querySelector('body');
+function bodyChanger(BodyBac){
+  BodyBac.style.backgroundColor = 'red' ;
+  
+}
+bodyChanger(bdChanger);
 // Part 3
-
-
+var spTitle = document.querySelectorAll('.special-title');
+ console.log(spTitle);
+function fSize (sTitles){
+      sTitles.style.fontSize = '2rem' ;
+      // console.log(txt.innerHTML)
+}
+fSize(spTitle);
 // Part 4
 
 
