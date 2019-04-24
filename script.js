@@ -27,20 +27,63 @@ randomQuote();
 
 // Part 1
 
+document.title = 'DOM forever';
 
 // Part 2
-
+document.body.style.color = 'darkblue';
 
 // Part 3
 
-
+var fontS = document.querySelectorAll('.special-title') ;
+for(i = 0 ; i < fontS.length ; i++){
+  fontS[i].style.fontSize = '2rem'
+}
 // Part 4
 
+var divClass = document.querySelectorAll('.side-bar')[1];
+var un = document.querySelectorAll('ul')[1];
+var node = document.createElement("li");  
+var TextNode = document.createTextNode("Riyadh");
+un.appendChild(node);        
+node.appendChild(TextNode);                              
+divClass.appendChild(un);
+this.document.body.appendChild(un);
 
 // Part 5
 
+var ndiv = document.createElement('div');
+ndiv.classList.add('.blog-post');
+var head = document.createElement('h1')
+var nline = document.createElement('p')
+var ce = document.createTextNode('end game');
+
+nline.appendChild(ce);
+head.appendChild(newCity);
+ndiv.appendChild(head);
+ndiv.appendChild(nline);
+
+document.querySelector('.main').appendChild(ndiv);
 
 // Part 6
 
+var neli = document.querySelector('#favorite-things')
+
+for (i=0;i<favThings.length;i++)
+   {
+     var one = favThings[i];
+     var first  = document.createElement('li');
+     var firstText = document.createTextNode(fav);
+     first.appendChild(firstText);
+     neli.appendChild(first);
+   }
+
 
 // Part 7
+
+
+var submitButton = document.querySelector('#quote-title');
+
+submitButton.addEventListener('click', function(event) {
+     randomQuote();
+     event.preventDefault();
+})
