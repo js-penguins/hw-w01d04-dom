@@ -63,23 +63,52 @@ function addToList(NL,NC,SL){
   SL.appendChild(NL);
 }
 addToList(newList,newCity,selList);
+
 // Part 5
+
 var dEle = document.createElement('div');
-dEle.className = 'blog-post';
-var hEle = document.createElement('h2');
+console.log(dEle);
+dEle.className = 'blog-post purple';
+console.log(dEle);
+var hEle = document.createElement('h1');
+console.log(hEle);
 var newTextH = document.createTextNode('Riyadh');
 var pEle = document.createElement('p');
 var newTextP = document.createTextNode(' I BECAME THE WORLD CHAMP');
+var mMain = document.querySelector('.main');
 
-function addToBlog(newP,pE,newTH,hE,dE){
+function addToBlog(newP,pE,newTH,hE,dE,mm){
+            //appending the text to the elements
               pE.appendChild(newP);
               hE.appendChild(newTH);
-              //
-              hE.appendChild(pE);
+              
+             
+              //appending the elements to each other
               dE.appendChild(hE);
+              dE.appendChild(pE);
+              mm.appendChild(dE);
 }
-console.log(addToBlog(newTextP,pEle,newTextH,hEle,dEle))
-// Part 6
+addToBlog(newTextP,pEle,newTextH,hEle,dEle,mMain)
 
+// Part 6
+var favList = document.querySelector('#favorite-things')
+console.log(favList);
+favoriteThings.forEach(function(i){
+      
+      
+      var newItem = document.createElement('li');
+      var txts = document.createTextNode(i);
+      favList.appendChild(newItem)
+      newItem.appendChild(txts)
+      
+    
+      // console.log(newItem);
+
+})
 
 // Part 7
+var getQu = document.querySelector('#quote-title');
+console.log(getQu)
+getQu.addEventListener('click', function() {
+  randomQuote();
+})
