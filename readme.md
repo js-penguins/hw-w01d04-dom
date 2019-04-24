@@ -36,7 +36,7 @@ Select all `.special-title` class elements and change their `font-size` to `2rem
 Let's add to DOM's **Past Races** list. Create a new `<li>` element, change the new `<li>` text to the name of a city, and append it to the **Past Races** list.
 
 #### Part 5
-Create a new `.blog-post` corresponding to the new city added in **Part 6**. You will have to create a new `<div>` with class of `.blog-post`, a new `<h2>` with text, and a new `<p>` with some text. Think about what order you want to create the elements, and what order you want to append them in.
+Create a new `.blog-post` corresponding to the new city added in **Part 4**. You will have to create a new `<div>` with class of `.blog-post`, a new `<h2>` with text, and a new `<p>` with some text. Think about what order you want to create the elements, and what order you want to append them in.
 
 #### Part 6 
 Dom's list of favorite things is empty! Lets change that. Iterate through then favoriteThings array. For every favorite thing, create an li element and append it to the ul with an id of favorite-things.

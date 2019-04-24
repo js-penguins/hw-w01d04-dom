@@ -28,19 +28,70 @@ randomQuote();
 // Part 1
 
 
+ var mainTitle = document.querySelector('#main-title').textContent.replace('Hi! My name is DOM Toretto.');
+
+
 // Part 2
+document.body.style.backgroundColor = '#af4b64';
 
 
 // Part 3
+var fontSize = document.querySelectorAll('.special-title')
+for (var i=0 ; i < fontSize.length; i++)
+fontSize[i].style.fontSize = '2rem';
 
 
 // Part 4
 
+var addDiv = document.querySelectorAll('.side-bar')[1];
+var addUl = document.querySelectorAll('ul')[1];
+var newLi = document.createElement('li');
+var newLiCity = document.createTextNode('Hial');
 
-// Part 5
+newLi.appendChild(newLiCity);
+addUl.appendChild(newLi);
+addDiv.appendChild(addUl);
+this.document.body.appendChild(addUl);
+
+// // Part 5
 
 
-// Part 6
+var newDiv = document.createElement('div');
+newDiv.classList.add('blog-post');
+newDiv.classList.add('purple');
+
+console.log(newDiv);
+
+var newH1 = document.createElement('h1');
+var pText = document.createElement('p');
+var cityNew = document.createTextNode('end game');
+
+pText.appendChild(cityNew);
+newH1.appendChild(newLiCity);
+newDiv.appendChild(newH1);
+newDiv.appendChild(pText);
+
+document.querySelector('.main').appendChild(newDiv);
+
+
+// // Part 6
+
+// var favoriteThings = document.querySelector('#favorite-things');
+// favoriteThings.forEach()
+
+//   favoriteThings.map(function(){
+//     return 
+//   })
+//   favoriteThings.appendChild(newLi);
+
 
 
 // Part 7
+var quoteTitle = document.querySelector('#quote-title');
+quoteTitle.addEventListener('click', function(even){
+  event.preventDefault();
+
+  console.log('click');
+  randomQuote();
+
+})
