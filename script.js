@@ -26,16 +26,45 @@ randomQuote();
 
 
 // Part 1
+updateTitle('I am DOM Toretto');
+
+function updateTitle (newT){
+  var newTitle = newT;
+  document.querySelector('#main-title').textContent = newTitle;
+  
+}
 
 
 // Part 2
+changeBackground('cyan');
 
-
+function changeBackground(color){
+  var background = color;
+  document.body.style.backgroundColor = background;
+  
+}
 // Part 3
+updateFontSize('special-title', '2rem');
+
+function updateFontSize(className, size) {
+  var x = document.getElementsByClassName(className);
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.fontSize = size;
+    console.log(x[i].style.fontSize)
+  }
+}
+
+
+
 
 
 // Part 4
 
+var list = document.getElementsByTagName('ul');
+var newCityElement = document.createElement('li');
+var newCityElementText = document.createTextNode('Jeddah');
+newCityElement.appendChild(newCityElementText);
+list[1].appendChild(newCityElement);
 
 // Part 5
 
