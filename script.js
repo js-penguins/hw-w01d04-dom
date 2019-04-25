@@ -79,11 +79,11 @@ function addPost(){
 addPost();
 // Part 6
 function addList(){
-  var favThing=['Diving','Swimming','Learning','Skiting'];
+ // var favThing=['Diving','Swimming','Learning','Skiting'];
   var listItem,postItem;
-  for (var i=0; i<favThing.length;i++){
+  for (var i=0; i<favoriteThings.length;i++){
     listItem=document.createElement('li');
-    listItem.appendChild(document.createTextNode(favThing[i]));
+    listItem.appendChild(document.createTextNode(favoriteThings[i]));
     postItem=document.getElementById('favorite-things');
     postItem.appendChild(listItem);
   }
